@@ -22,22 +22,6 @@ class AuthorsController < ApplicationController
     end
   end
 
-  # GET /authors/:id/posts/new - Create a new post for :id
-  def create_post 
-    @post = Post.new(params[:id])
-
-    respond_to do |format|
-      if @post.save
-        format.html { redirect_to post_url(@post), notice: "Post was successfully created." }
-        format.json { render :show, status: :created, location: @post }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-
   # GET /authors/new
   def new
     @author = Author.new
