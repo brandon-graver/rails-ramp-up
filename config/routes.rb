@@ -9,5 +9,4 @@ Rails.application.routes.draw do
 
   # Dynamic Routes for the Authors
   get 'authors/:id/posts', to: 'authors#posts'
-  get 'authors/:id/posts/new', to: 'authors#create_post'
 end
